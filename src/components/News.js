@@ -16,12 +16,6 @@ export default function News(props) {
     return String.charAt(0).toUpperCase() + String.slice(1).toLowerCase();
   };
 
-  // document.title = `${this.capitaliseString(
-  //   this.props.category
-  // )} - Fatafatnews`;
-  // afdb2428fd3143a09713f7b331355683 --api key1
-  // 21761d66983f4f858117df3e7ecf9805  --api key2
-
   const updateNews = async () => {
     props.updateProgress(10);
     let newsApi = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.newsApi}&pageSize=${props.pageSize}&page=${state.page}`;
