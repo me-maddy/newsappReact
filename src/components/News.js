@@ -64,7 +64,7 @@ export default function News(props) {
       </h1>
       {state.loading && <Spinner />}
       <InfiniteScroll
-        dataLength={state.articles.length} //This is important field to render the next data
+        dataLength={state.articles.length}
         next={fetchData}
         hasMore={state.articles.length !== state.totalResults}
         loader={<Spinner />}
